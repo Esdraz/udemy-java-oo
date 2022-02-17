@@ -22,8 +22,8 @@ public class Program {
 
         if (answer.equals("y")) {
             System.out.print("Enter initial deposit value: ");
-            Double amount = sc.nextDouble();
-            account = new Account(number, holder, amount);
+            double initialDeposit = sc.nextDouble();
+            account = new Account(number, holder, initialDeposit);
         } else {
             account = new Account(number, holder);
         }
@@ -32,7 +32,7 @@ public class Program {
 
         System.out.println();
         System.out.print("Enter a deposit value: ");
-        Double amount = sc.nextDouble();
+        double amount = sc.nextDouble();
         account.deposit(amount);
         System.out.println(account);
 

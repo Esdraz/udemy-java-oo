@@ -4,10 +4,7 @@ public class Account {
 
     private int number;
     private String holder;
-    private Double balance;
-
-    public Account() {
-    }
+    private double balance;
 
     public Account(int number, String holder) {
         this.number = number;
@@ -16,10 +13,10 @@ public class Account {
 
     }
 
-    public Account(int number, String holder, Double balance) {
+    public Account(int number, String holder, double initialDeposit) {
         this.number = number;
         this.holder = holder;
-        this.balance = balance;
+        deposit(initialDeposit);
     }
 
     public int getNumber() {
@@ -34,15 +31,15 @@ public class Account {
         this.holder = holder;
     }
 
-    public Double getBalance() {
+    public double getBalance() {
         return balance;
     }
 
-    public void deposit(Double amount) {
+    public void deposit(double amount) {
         this.balance += amount;
     }
 
-    public void withdraw(Double amount) {
+    public void withdraw(double amount) {
         this.balance -= amount + 5.0;
     }
 
