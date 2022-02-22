@@ -1,4 +1,4 @@
-package Topicos.Arrays;
+package Topicos.Arrays.Vetores;
 
 import java.util.Locale;
 import java.util.Scanner;

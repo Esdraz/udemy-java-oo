@@ -1,4 +1,4 @@
-package Topicos.Arrays;
+package Topicos.Arrays.Vetores;
 
 public class Product {
 
