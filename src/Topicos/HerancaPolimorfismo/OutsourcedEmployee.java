@@ -1,14 +1,14 @@
 package Topicos.HerancaPolimorfismo;
 
-public class OutsorcedEmployee extends Employee {
+public class OutsourcedEmployee extends Employee {
 
     private Double additionalCharge;
 
-    public OutsorcedEmployee() {
+    public OutsourcedEmployee() {
         super();
     }
 
-    public OutsorcedEmployee(String name, Integer hours, Double valuePerHour, Double additionalCharge) {
+    public OutsourcedEmployee(String name, Integer hours, Double valuePerHour, Double additionalCharge) {
         super(name, hours, valuePerHour);
         this.additionalCharge = additionalCharge;
     }

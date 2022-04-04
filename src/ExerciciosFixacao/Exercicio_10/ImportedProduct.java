@@ -21,11 +21,12 @@ public class ImportedProduct extends Product{
         this.customsFee = customsFee;
     }
 
-    public Double totalPrice() {
-        return super.getPrice() + this.customsFee;
-    }
     @Override
     public String priceTag() {
-        return super.priceTag() ;
+        return getName() + " $ " + totalPrice() + " (Customs fee: $ " + this.customsFee + " )";
+    }
+
+    public Double totalPrice() {
+        return super.getPrice() + this.customsFee;
     }
 }

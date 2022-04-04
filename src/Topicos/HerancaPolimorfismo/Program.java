@@ -12,15 +12,16 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
+        //== Instanciando uma lista vazia
         List<Employee> list = new ArrayList<>();
 
         System.out.print("Enter the number of employees: ");
         int n = sc.nextInt();
 
-        //=== Leitura dos N funcionários:
+        //=== Leitura dos N funcionários e armazenar em uma lista:
         for (int i = 0; i < n; i++) {
             System.out.println("Employee #" + (i + 1) + " data:");
-            System.out.print("Outsorced (y/n)? ");
+            System.out.print("Outsourced (y/n)? ");
             char ch = sc.next().charAt(0);
             System.out.print("Name: ");
             sc.nextLine();
@@ -33,7 +34,7 @@ public class Program {
             if (ch == 'y') {
                 System.out.print("Additional charge: ");
                 double additionalCharge = sc.nextDouble();
-                list.add(new OutsorcedEmployee(name, hours, valuePerHour, additionalCharge));
+                list.add(new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge));
             } else {
                 list.add(new Employee(name, hours, valuePerHour));
             }
