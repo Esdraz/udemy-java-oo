@@ -36,10 +36,8 @@ public class Program {
                 sc.nextLine();
                 System.out.print("Manufacture date (DD/MM/YYYY): ");
                 String manufactureDate = sc.nextLine();
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
                 LocalDate date = LocalDate.parse(manufactureDate, formatter);
-                String manufactureFormattedDate = date.format(formatter);
-
 
                 list.add(new UsedProduct(name, price, date));
             }
@@ -51,9 +49,9 @@ public class Program {
         }
 
         System.out.println();
-        System.out.println("PRICE TAGS:");
         for (Product product: list) {
             System.out.println(product.priceTag());
+        System.out.println("PRICE TAGS:");
         }
 
 

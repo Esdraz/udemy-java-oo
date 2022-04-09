@@ -1,10 +1,13 @@
 package ExerciciosFixacao.Exercicio_10;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class UsedProduct extends Product{
 
     private LocalDate manufactureDate;
+
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     public UsedProduct() {
         super();
@@ -25,6 +28,6 @@ public class UsedProduct extends Product{
 
     @Override
     public String priceTag() {
-        return getName() + " (used)" + " $ " + getPrice() + " (Manufacture date: " + manufactureDate + ")";
+        return getName() + " (used)" + " $ " + getPrice() + " (Manufacture date: " + manufactureDate.format(formatter)+ ")";
     }
 }
